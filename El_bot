@@ -1,0 +1,38 @@
+import discord
+
+# La variable intents almacena los privilegios del bot
+intents = discord.Intents.default()
+# Activar el privilegio de lectura de mensajes
+intents.message_content = True
+# Crear un bot en la variable cliente y transferirle los privilegios
+client = discord.Client(intents=intents)
+
+@client.event
+async def on_ready():
+    print('Hemos iniciado sesión como {client.user}')
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+    if message.content.startswith('$hola'):
+        await message.channel.send("Hola, mi bro!")
+        await message.channel.send("Como estas?")
+    elif message.content.startswith('$bien y tu?'):
+        await message.channel.send("Bien jeje")
+    elif message.content.startswith('$bien'):
+        await message.channel.send("a que bueno solo te recuerdo que tomes awa.")
+    elif message.content.startswith('$a ok gracias'):
+        await message.channel.send("Denada. ;)")
+    elif message.content.startswith('$mal'):
+        await message.channel.send("nunca pierdas la esperanza t kiero :)")
+    elif message.content.startswith('$adios'):
+        await message.channel.send("Adios cuidate!")
+    elif message.content.startswith('$como esta el server?'):
+        await message.channel.send("bien nada que reportar, jefe.")
+    elif message.content.startswith('$hello there'):
+        await message.channel.send("General kenovi.")
+    else:
+        await message.channel.send(message.content)
+
+client.run("Tu token")

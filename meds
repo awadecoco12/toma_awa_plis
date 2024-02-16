@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>List of Medicines</title>
+<style>
+    /* Style the list items */
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 20px;
+    }
+
+    /* Style the medicine names */
+    h2 {
+        margin-bottom: 5px;
+        font-size: 20px;
+    }
+
+    /* Style the medicine descriptions */
+    p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    /* Style the search bar */
+    #search {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+</style>
+</head>
+<body>
+
+<h1>List of Medicines</h1>
+
+<!-- Search bar -->
+<input type="text" id="search" onkeyup="searchMedicine()" placeholder="Search for medicines...">
+
+<ul id="medicineList">
+    <li>
+        <h2>Aspirin</h2>
+        <p>Aspirin is a nonsteroidal anti-inflammatory drug (NSAID) used to treat pain, fever, and inflammation. It works by inhibiting the production of prostaglandins, which are chemicals in the body that promote inflammation, pain, and fever.</p>
+    </li>
+    <li>
+        <h2>Acetaminophen</h2>
+        <p>Acetaminophen, also known as paracetamol, is a medication used to treat pain and reduce fever. It is commonly used to relieve headaches, muscle aches, arthritis pain, and toothaches. Unlike NSAIDs, acetaminophen does not reduce inflammation.</p>
+    </li>
+    <li>
+        <h2>Ibuprofen</h2>
+        <p>Ibuprofen is a nonsteroidal anti-inflammatory drug (NSAID) used to relieve pain, inflammation, and fever. It works by inhibiting the production of prostaglandins, which are chemicals in the body that cause pain and inflammation.</p>
+    </li>
+    <li>
+        <h2>Naproxen</h2>
+        <p>Naproxen is a nonsteroidal anti-inflammatory drug (NSAID) used to treat pain, inflammation, and stiffness caused by conditions such as arthritis, menstrual cramps, and muscle aches. It works by reducing the production of prostaglandins, which are chemicals that cause pain and inflammation.</p>
+    </li>
+    <li>
+        <h2>Diphenhydramine</h2>
+        <p>Diphenhydramine is an antihistamine medication used to relieve symptoms of allergies, hay fever, and the common cold, such as runny nose, sneezing, itching, and watery eyes. It can also be used as a sleep aid due to its sedative effects.</p>
+    </li>
+    <li>
+        <h2>Loratadine</h2>
+        <p>Loratadine is a non-drowsy antihistamine medication used to relieve symptoms of allergies, hay fever, and hives, such as sneezing, runny nose, itching, and watery eyes. It works by blocking the action of histamine, a substance in the body that causes allergy symptoms.</p>
+    </li>
+    <li>
+        <h2>Ranitidine</h2>
+        <p>Ranitidine is a histamine-2 blocker medication used to reduce the production of stomach acid and treat conditions such as heartburn, acid indigestion, and gastroesophageal reflux disease (GERD). It works by blocking the action of histamine, a chemical in the body that stimulates the production of stomach acid.</p>
+    </li>
+    <li>
+        <h2>Omeprazole</h2>
+        <p>Omeprazole is a proton pump inhibitor (PPI) medication used to reduce the production of stomach acid and treat conditions such as heartburn, acid indigestion, and gastroesophageal reflux disease (GERD). It works by blocking the enzyme in the stomach lining that produces acid.</p>
+    </li>
+    <li>
+        <h2>Lisinopril</h2>
+        <p>Lisinopril is an angiotensin-converting enzyme (ACE) inhibitor medication used to treat high blood pressure (hypertension), heart failure, and improve survival after a heart attack. It works by relaxing blood vessels, which lowers blood pressure and improves blood flow.</p>
+    </li>
+    <li>
+        <h2>Metformin</h2>
+        <p>Metformin is a biguanide medication used to treat type 2 diabetes by controlling blood sugar levels. It works by decreasing the amount of sugar produced by the liver and increasing the sensitivity of muscle cells to insulin, allowing for better glucose uptake and utilization.</p>
+    </li>
+
+    <li>
+        <h2>Simvastatin</h2>
+        <p>Simvastatin is a statin medication used to lower cholesterol levels and reduce the risk of heart disease. It works by inhibiting an enzyme in the liver that produces cholesterol, thereby decreasing the amount of cholesterol in the bloodstream.</p>
+    </li>
+    <li>
+        <h2>Atorvastatin</h2>
+        <p>Atorvastatin is a statin medication used to lower cholesterol levels and reduce the risk of heart disease. It works by inhibiting an enzyme in the liver that produces cholesterol, thereby decreasing the amount of cholesterol in the bloodstream.</p>
+    </li>
+    <li>
+        <h2>Levothyroxine</h2>
+        <p>Levothyroxine is a thyroid hormone medication used to treat hypothyroidism, a condition where the thyroid gland does not produce enough thyroid hormone. It works by replacing the missing thyroid hormone in the body.</p>
+    </li>
+    <li>
+        <h2>Clopidogrel</h2>
+        <p>Clopidogrel is an antiplatelet medication used to prevent blood clots in people with certain heart conditions or who have had a recent heart attack or stroke. It works by inhibiting the platelets in the blood from sticking together and forming clots.</p>
+    </li>
+    <li>
+        <h2>Metoprolol</h2>
+        <p>Metoprolol is a beta-blocker medication used to treat high blood pressure, angina (chest pain), and heart failure. It works by blocking the action of certain natural chemicals in the body, such as adrenaline, that affect the heart and blood vessels.</p>
+    </li>
+    <li>
+        <h2>Albuterol</h2>
+        <p>Albuterol is a bronchodilator medication used to treat asthma and chronic obstructive pulmonary disease (COPD) by relaxing the muscles in the airways and improving airflow to the lungs. It is commonly used as a rescue inhaler for sudden asthma symptoms.</p>
+    </li>
+    <li>
+        <h2>Warfarin</h2>
+        <p>Warfarin is an anticoagulant medication used to prevent blood clots in people with certain heart conditions, atrial fibrillation, or who have had a recent blood clot. It works by inhibiting the formation of blood clots by interfering with the body's natural clotting process.</p>
+    </li>
+    <li>
+        <h2>Hydrochlorothiazide</h2>
+        <p>Hydrochlorothiazide is a diuretic medication used to treat high blood pressure and fluid retention (edema) caused by conditions such as heart failure, kidney problems, or liver cirrhosis. It works by increasing the amount of urine produced by the kidneys, which helps to reduce excess fluid in the body.</p>
+    </li>
+    <li>
+        <h2>Metoprolol</h2>
+        <p>Metoprolol is a beta-blocker medication used to treat high blood pressure, angina (chest pain), and heart failure. It works by blocking the action of certain natural chemicals in the body, such as adrenaline, that affect the heart and blood vessels.</p>
+    </li>
+    <li>
+        <h2>Metformin</h2>
+        <p>Metformin is a biguanide medication used to treat type 2 diabetes by controlling blood sugar levels. It works by decreasing the amount of sugar produced by the liver and increasing the sensitivity of muscle cells to insulin, allowing for better glucose uptake and utilization.</p>
+    </li>
+    <li>
+        <h2>Amlodipine</h2>
+        <p>Amlodipine is a calcium channel blocker medication used to treat high blood pressure (hypertension) and chest pain (angina). It works by relaxing blood vessels, which allows blood to flow more easily and lowers blood pressure.</p>
+    </li>
+    <li>
+        <h2>Losartan</h2>
+        <p>Losartan is an angiotensin II receptor blocker (ARB) medication used to treat high blood pressure (hypertension) and prevent kidney damage in people with diabetes. It works by blocking the action of angiotensin II, a hormone that constricts blood vessels and increases blood pressure.</p>
+    </li>
+    <li>
+        <h2>Fluoxetine</h2>
+        <p>Fluoxetine is a selective serotonin reuptake inhibitor (SSRI) antidepressant medication used to treat depression, obsessive-compulsive disorder (OCD), bulimia nervosa, and panic disorder. It works by increasing the levels of serotonin, a neurotransmitter in the brain that affects mood and emotions.</p>
+    </li>
+    <li>
+        <h2>Citalopram</h2>
+        <p>Citalopram is a selective serotonin reuptake inhibitor (SSRI) antidepressant medication used to treat depression and panic disorder. It works by increasing the levels of serotonin, a neurotransmitter in the brain that affects mood and emotions.</p>
+    </li>
+    <li>
+        <h2>Escitalopram</h2>
+        <p>Escitalopram is a selective serotonin reuptake inhibitor (SSRI) antidepressant medication used to treat depression and generalized anxiety disorder (GAD). It works by increasing the levels of serotonin, a neurotransmitter in the brain that affects mood and emotions.</p>
+    </li>
+    <li>
+        <h2>Fluconazole</h2>
+        <p>Fluconazole is an antifungal medication used to treat infections caused by fungus, including yeast infections of the mouth, throat, esophagus, abdomen, lungs, blood, and other organs. It works by stopping the growth of fungus.</p>
+    </li>
+    <li>
+        <h2>Levofloxacin</h2>
+        <p>Levofloxacin is an antibiotic medication used to treat bacterial infections of the sinuses, skin, lungs, ears, airways, bones, joints, and urinary tract. It works by stopping the growth of bacteria.</p>
+    </li>
+    <li>
+        <h2>Cephalexin</h2>
+        <p>Cephalexin is an antibiotic medication used to treat bacterial infections such as respiratory tract infections, skin infections, ear infections, and urinary tract infections. It works by stopping the growth of bacteria.</p>
+    </li>
+    <li>
+        <h2>Amoxicillin</h2>
+        <p>Amoxicillin is an antibiotic medication used to treat bacterial infections such as respiratory tract infections, ear infections, skin infections, and urinary tract infections. It works by stopping the growth of bacteria.</p>
+    </li>
+    <li>
+        <h2>Azithromycin</h2>
+        <p>Azithromycin is an antibiotic medication used to treat bacterial infections such as respiratory tract infections, skin infections, ear infections, and sexually transmitted diseases. It works by stopping the growth of bacteria.</p>
+    </li>
+    <li>
+        <h2>Doxycycline</h2>
+        <p>Doxycycline is an antibiotic medication used to treat bacterial infections such as respiratory tract infections, skin infections, eye infections, and sexually transmitted diseases. It works by stopping the growth of bacteria.</p>
+    </li>
+    <li>
+        <h2>Ciprofloxacin</h2>
+        <p>Ciprofloxacin is an antibiotic medication used to treat bacterial infections such as urinary tract infections, respiratory tract infections, skin infections, and bone/joint infections. It works by stopping the growth of bacteria.</p>
+    </li>
+    <li>
+        <h2>Trimethoprim/sulfamethoxazole</h2>
+        <p>Trimethoprim/sulfamethoxazole is an antibiotic medication used to treat bacterial infections such as urinary tract infections, respiratory tract infections, ear infections, and traveler's diarrhea. It works by stopping the growth of bacteria.</p>
+    </li>
+    <li>
+        <h2>Clindamycin</h2>
+        <p>Clindamycin is an antibiotic medication used to treat bacterial infections such as skin infections, respiratory tract infections, pelvic infections, and abdominal infections. It works by stopping the growth of bacteria.</p>
+    </li>
+    <li>
+        <h2>Methylprednisolone</h2>
+        <p>Methylprednisolone is a corticosteroid medication used to treat conditions such as inflammation, allergic reactions, asthma, arthritis, skin conditions, and certain types of cancer. It works by suppressing the immune system and reducing inflammation.</p>
+    </li>
+    <li>
+        <h2>Prednisone</h2>
+        <p>Prednisone is a corticosteroid medication used to treat conditions such as inflammation, allergic reactions, asthma, arthritis, skin conditions, and certain types of cancer. It works by suppressing the immune system and reducing inflammation.</p>
+    </li>
+    <li>
+        <h2>Hydrocortisone</h2>
+        <p>Hydrocortisone is a corticosteroid medication used to treat conditions such as inflammation, allergic reactions, eczema, and psoriasis. It works by suppressing the immune system and reducing inflammation.</p>
+    </li>
+    <li>
+        <h2>Budesonide</h2>
+        <p>Budesonide is a corticosteroid medication used to treat asthma, allergic rhinitis, inflammatory bowel disease, and autoimmune hepatitis. It works by suppressing the immune system and reducing inflammation.</p>
+    </li>
+    <li>
+        <h2>Montelukast</h2>
+        <p>Montelukast is a leukotriene receptor antagonist medication used to treat asthma, allergic rhinitis, and exercise-induced bronchoconstriction. It works by blocking the action of leukotrienes, substances in the body that cause inflammation and constriction of the airways.</p>
+    </li>
+    <li>
+        <h2>Alprazolam</h2>
+        <p>Alprazolam is a benzodiazepine medication used to treat anxiety and panic disorder. It works by enhancing the activity of certain neurotransmitters in the brain that produce a calming effect.</p>
+    </li>
+    <li>
+        <h2>Lorazepam</h2>
+        <p>Lorazepam is a benzodiazepine medication used to treat anxiety, insomnia, and certain types of seizures. It works by enhancing the activity of certain neurotransmitters in the brain that produce a calming effect.</p>
+    </li>
+    <li>
+        <h2>Diazepam</h2>
+        <p>Diazepam is a benzodiazepine medication used to treat anxiety, muscle spasms, alcohol withdrawal, and certain types of seizures. It works by enhancing the activity of certain neurotransmitters in the brain that produce a calming effect.</p>
+    </li>
+    <li>
+        <h2>Fluticasone</h2>
+        <p>Fluticasone is a corticosteroid medication used to treat asthma, allergic rhinitis, and nasal polyps. It works by suppressing the immune system and reducing inflammation in the airways and nasal passages.</p>
+    </li>
+    <li>
+        <h2>Mometasone</h2>
+        <p>Mometasone is a corticosteroid medication used to treat asthma, allergic rhinitis, eczema, and psoriasis. It works by suppressing the immune system and reducing inflammation in the airways and skin.</p>
+    </li>
+    <li>
+        <h2>Triamcinolone</h2>
+        <p>Triamcinolone is a corticosteroid medication used to treat inflammation and skin conditions such as eczema, psoriasis, and allergic reactions. It works by suppressing the immune system and reducing inflammation.</p>
+    </li>
+    <li>
+        <h2>Nystatin</h2>
+        <p>Nystatin is an antifungal medication used to treat fungal infections of the skin, mouth, esophagus, and intestinal tract. It works by stopping the growth of fungus.</p>
+    </li>
+    <li>
+        <h2>Acyclovir</h2>
+        <p>Acyclovir is an antiviral medication used to treat infections caused by the herpes viruses, including genital herpes, cold sores, shingles, and chickenpox. It works by stopping the spread of the virus in the body.</p>
+    </li>
+</ul>
+
+<script>
+    function searchMedicine() {
+        var input, filter, ul, li, h2, p, i, txtValue;
+        input = document.getElementById('search');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("medicineList");
+        li = ul.getElementsByTagName('li');
+        for (i = 0; i < li.length; i++) {
+            h2 = li[i].getElementsByTagName("h2")[0];
+            p = li[i].getElementsByTagName("p")[0];
+            txtValue = h2.textContent || h2.innerText;
+            txtValue += p.textContent || p.innerText; // Combine medicine name and description
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
